@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Doctors | MediCare - Expert Healthcare Professionals</title>
+  <meta name="description" content="Meet our team of expert healthcare professionals at MediCare. Find the right doctor for your needs.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="doctors.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo"><span class="logo-icon">✦</span> MediCare</div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="doctors.html" class="active">Doctors</a></li>
+          <li><a href="index.html#health-tips">Health Tips</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="index.html#appointment" class="cta-nav">Book Appointment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- DOCTORS HERO -->
+  <section class="doctors-hero">
+    <div class="container">
+      <div class="doctors-hero-content">
+        <h1>Our Expert Doctors</h1>
+        <p>Meet our team of highly qualified healthcare professionals dedicated to your well-being.</p>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+          <form class="search-form" action="#" method="get">
+            <div class="search-wrapper">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="doctor-search" placeholder="Search by name, specialty, or department..." class="search-input">
+              <button type="submit" class="btn btn-primary search-btn">Search</button>
+            </div>
+          </form>
+          <div class="search-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="cardiology">❤️ Cardiology</button>
+            <button class="filter-btn" data-filter="pediatrics">👶 Pediatrics</button>
+            <button class="filter-btn" data-filter="general">🩺 General</button>
+            <button class="filter-btn" data-filter="dentistry">🦷 Dentistry</button>
+            <button class="filter-btn" data-filter="neurology">🧠 Neurology</button>
+            <button class="filter-btn" data-filter="orthopedics">🦴 Orthopedics</button>
+            <button class="filter-btn" data-filter="dermatology">🧴 Dermatology</button>
+            <button class="filter-btn" data-filter="gynecology">👩‍⚕️ Gynecology</button>
+            <button class="filter-btn" data-filter="psychiatry">🧘 Psychiatry</button>
+            <button class="filter-btn" data-filter="ophthalmology">👁️ Ophthalmology</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCTORS LIST -->
+  <section class="doctors-list">
+    <div class="container">
+      <div class="results-count">
+        <span id="doctor-count">10</span> Doctors Found
+      </div>
+      
+      <div class="doctors-grid" id="doctors-grid">
+        <!-- Doctor 1 -->
+        <div class="doctor-card" data-specialty="cardiology">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Aarav Sharma" class="doc-img">
+          <div class="doctor-info">
+            <h3>Dr. Aarav Sharma</h3>
+            <p class="specialty">❤️ Cardiologist</p>
+            <p class="bio">15+ years of experience in advanced cardiac care and interventional cardiology.</p>
+            <div class="doctor-meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 4.9</span>
+              <span class="experience">15+ Years</span>
+            </div>
+            <div class="doctor-actions">
+              <a href="#profile-doctor1" class="btn btn-primary btn-small">View Profile</a>
+              <a href="index.html#appointment" class="btn btn-outline btn-small">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 2 -->
+        <div class="doctor-card" data-specialty="pediatrics">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Ananya Mehta" class="doc-img">
+          <div class="doctor-info">
+            <h3>Dr. Ananya Mehta</h3>
+            <p class="specialty">👶 Pediatrician</p>
+            <p class="bio">12+ years of gentle and compassionate care for children and adolescents.</p>
+            <div class="doctor-meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 4.8</span>
+              <span class="experience">12+ Years</span>
+            </div>
+            <div class="doctor-actions">
+              <a href="#profile-doctor2" class="btn btn-primary btn-small">View Profile</a>
+              <a href="index.html#appointment" class="btn btn-outline btn-small">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 3 -->
+        <div class="doctor-card" data-specialty="general">
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Dr. Rohan Kapoor" class="doc-img">
+          <div class="doctor-info">
+            <h3>Dr. Rohan Kapoor</h3>
+            <p class="specialty">🩺 General Physician</p>
+            <p class="bio">10+ years of comprehensive primary care and internal medicine expertise.</p>
+            <div class="doctor-meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 4.7</span>
+              <span class="experience">10+ Years</span>
+            </div>
+            <div class="doctor-actions">
+              <a href="#profile-doctor3" class="btn btn-primary btn-small">View Profile</a>
+              <a href="index.html#appointment" class="btn btn-outline btn-small">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 4 -->
+        <div class="doctor-card" data-specialty="dentistry">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Sara Khan" class="doc-img">
+          <div class="doctor-info">
+            <h3>Dr. Sara Khan</h3>
+            <p class="specialty">🦷 Dentist</p>
+            <p class="bio">8+ years of patient-focused cosmetic and restorative dentistry.</p>
+            <div class="doctor-meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 4.9</span>
+              <span class="experience">8+ Years</span>
+            </div>
+            <div class="doctor-actions">
+              <a href="#profile-doctor4" class="btn btn-primary btn-small">View Profile</a>
+              <a href="index.html#appointment" class="btn btn-outline btn-small">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 5 -->
+        <div class="doctor-card" data-specialty="neurology">
+          <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Dr. Vikram Patel" class="doc-img">
+          <div class="doctor-info">
+            <h3>Dr. Vikram Patel</h3>
+            <p class="specialty">🧠 Neurologist</p>
+            <p class="bio">14+ years of expertise in neurological disorders and brain health.</p>
+            <div class="doctor-meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 4.8</span>
+              <span class="experience">14+ Years</span>
+            </div>
+            <div class="doctor-actions">
+              <a href="#profile-doctor5" class="btn btn-primary btn-small">View Profile</a>
+              <a href="index.html#appointment" class="btn btn-outline btn-small">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 6 -->
+        <div class="doctor-card" data-specialty="orthopedics">
+          <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Dr. Priya Singh" class="doc-img">
+          <div class="doctor-info">
+            <h3>Dr. Priya Singh</h3>
+            <p class="specialty">🦴 Orthopedic Surgeon</p>
+            <p class="bio">11+ years of experience in joint replacement and sports medicine.</p>
+            <div class="doctor-meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 4.7</span>
+              <span class="experience">11+ Years</span>
+            </div>
+            <div class="doctor-actions">
+              <a href="#profile-doctor6" class="btn btn-primary btn-small">View Profile</a>
+              <a href="index.html#appointment" class="btn btn-outline btn-small">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 7 -->
+        <div class="doctor-card" data-specialty="dermatology">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Dr. Meera Reddy" class="doc-img">
+          <div class="doctor-info">
+            <h3>Dr. Meera Reddy</h3>
+            <p class="specialty">🧴 Dermatologist</p>
+            <p class="bio">9+ years of expertise in skin, hair, and cosmetic dermatology.</p>
+            <div class="doctor-meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 4.6</span>
+              <span class="experience">9+ Years</span>
+            </div>
+            <div class="doctor-actions">
+              <a href="#profile-doctor7" class="btn btn-primary btn-small">View Profile</a>
+              <a href="index.html#appointment" class="btn btn-outline btn-small">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 8 -->
+        <div class="doctor-card" data-specialty="gynecology">
+          <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="Dr. Sunita Verma" class="doc-img">
+          <div class="doctor-info">
+            <h3>Dr. Sunita Verma</h3>
+            <p class="specialty">👩‍⚕️ Gynecologist</p>
+            <p class="bio">13+ years of comprehensive women's health and obstetric care.</p>
+            <div class="doctor-meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 4.9</span>
+              <span class="experience">13+ Years</span>
+            </div>
+            <div class="doctor-actions">
+              <a href="#profile-doctor8" class="btn btn-primary btn-small">View Profile</a>
+              <a href="index.html#appointment" class="btn btn-outline btn-small">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 9 -->
+        <div class="doctor-card" data-specialty="psychiatry">
+          <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="Dr. Arjun Nair" class="doc-img">
+          <div class="doctor-info">
+            <h3>Dr. Arjun Nair</h3>
+            <p class="specialty">🧘 Psychiatrist</p>
+            <p class="bio">10+ years of experience in mental health and wellness.</p>
+            <div class="doctor-meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 4.5</span>
+              <span class="experience">10+ Years</span>
+            </div>
+            <div class="doctor-actions">
+              <a href="#profile-doctor9" class="btn btn-primary btn-small">View Profile</a>
+              <a href="index.html#appointment" class="btn btn-outline btn-small">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 10 -->
+        <div class="doctor-card" data-specialty="ophthalmology">
+          <img src="https://randomuser.me/api/portraits/women/78.jpg" alt="Dr. Kavya Sharma" class="doc-img">
+          <div class="doctor-info">
+            <h3>Dr. Kavya Sharma</h3>
+            <p class="specialty">👁️ Ophthalmologist</p>
+            <p class="bio">10+ years of expertise in eye care and vision correction.</p>
+            <div class="doctor-meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 4.8</span>
+              <span class="experience">10+ Years</span>
+            </div>
+            <div class="doctor-actions">
+              <a href="#profile-doctor10" class="btn btn-primary btn-small">View Profile</a>
+              <a href="index.html#appointment" class="btn btn-outline btn-small">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="demo-note">All doctors are fictional/demo content for demonstration purposes.</p>
+    </div>
+  </section>
+
+  <!-- DOCTOR PROFILES -->
+  
+  <!-- Profile 1: Dr. Aarav Sharma -->
+  <section id="profile-doctor1" class="profile-page">
+    <div class="container">
+      <a href="doctors.html" class="back-link">← Back to All Doctors</a>
+      <div class="profile-grid">
+        <div class="profile-avatar">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Aarav Sharma">
+          <h3>Dr. Aarav Sharma</h3>
+          <span class="specialty-badge">❤️ Cardiologist</span>
+          <div class="rating">⭐⭐⭐⭐⭐ 4.9 (127 reviews)</div>
+        </div>
+        <div class="profile-details">
+          <h2>Dr. Aarav Sharma, MD, FACC</h2>
+          <span class="specialty-badge">Senior Consultant Cardiologist</span>
+          <p class="bio-full">Dr. Aarav Sharma is a distinguished cardiologist with over 15 years of experience in advanced cardiac care. He completed his medical education at the prestigious All India Institute of Medical Sciences (AIIMS) and pursued his cardiology fellowship at the Cleveland Clinic, USA. Dr. Sharma specializes in interventional cardiology, preventive cardiology, and heart failure management. He is board-certified in cardiovascular disease and has published numerous research papers in leading medical journals.</p>
+          
+          <div class="info-grid">
+            <div class="info-item"><strong>🎓 Education:</strong> MBBS (AIIMS), MD (Cardiology), Fellowship in Interventional Cardiology (Cleveland Clinic)</div>
+            <div class="info-item"><strong>⏳ Experience:</strong> 15+ years</div>
+            <div class="info-item"><strong>🗣️ Languages:</strong> English, Hindi, Marathi</div>
+            <div class="info-item"><strong>🏥 Clinic:</strong> MediCare Heart Centre, Wellness City</div>
+            <div class="info-item"><strong>📅 Available:</strong> Mon, Wed, Fri (9:00 AM - 5:00 PM)</div>
+            <div class="info-item"><strong>🏆 Specializations:</strong> Interventional Cardiology, Preventive Cardiology, Heart Failure Management</div>
+          </div>
+
+          <a href="index.html#appointment" class="btn btn-primary">Book Appointment</a>
+
+          <div class="chat-section">
+            <h3>💬 Chat with Dr. Sharma</h3>
+            <div class="chat-messages">
+              <div class="chat-message received"><span class="msg-sender">Dr. Sharma:</span> <span class="msg-text">Hello! How can I help you today?</span></div>
+              <div class="chat-message sent"><span class="msg-sender">You:</span> <span class="msg-text">I have a question about my heart health.</span></div>
+            </div>
+            <form class="chat-form" action="#" method="get">
+              <input type="text" placeholder="Type your message..." required>
+              <button type="submit" class="btn btn-primary btn-small">Send</button>
+            </form>
+            <p class="disclaimer" style="margin-top:0.5rem;font-size:0.8rem;">💡 Demo chat — messages are not actually sent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile 2: Dr. Ananya Mehta -->
+  <section id="profile-doctor2" class="profile-page">
+    <div class="container">
+      <a href="doctors.html" class="back-link">← Back to All Doctors</a>
+      <div class="profile-grid">
+        <div class="profile-avatar">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Ananya Mehta">
+          <h3>Dr. Ananya Mehta</h3>
+          <span class="specialty-badge">👶 Pediatrician</span>
+          <div class="rating">⭐⭐⭐⭐⭐ 4.8 (98 reviews)</div>
+        </div>
+        <div class="profile-details">
+          <h2>Dr. Ananya Mehta, MD, FAAP</h2>
+          <span class="specialty-badge">Consultant Pediatrician</span>
+          <p class="bio-full">Dr. Ananya Mehta is a compassionate pediatrician with over 12 years of experience in child healthcare. She completed her medical degree from the University of Delhi and her pediatric residency at Boston Children's Hospital. Dr. Mehta specializes in child development, preventive care, and adolescent health. She is a Fellow of the American Academy of Pediatrics (FAAP).</p>
+          
+          <div class="info-grid">
+            <div class="info-item"><strong>🎓 Education:</strong> MBBS (University of Delhi), MD (Pediatrics), FAAP</div>
+            <div class="info-item"><strong>⏳ Experience:</strong> 12+ years</div>
+            <div class="info-item"><strong>🗣️ Languages:</strong> English, Hindi, Gujarati</div>
+            <div class="info-item"><strong>🏥 Clinic:</strong> MediCare Children's Wing, Wellness City</div>
+            <div class="info-item"><strong>📅 Available:</strong> Tue, Thu, Sat (10:00 AM - 6:00 PM)</div>
+            <div class="info-item"><strong>🏆 Specializations:</strong> Child Development, Adolescent Health, Preventive Care</div>
+          </div>
+
+          <a href="index.html#appointment" class="btn btn-primary">Book Appointment</a>
+
+          <div class="chat-section">
+            <h3>💬 Chat with Dr. Mehta</h3>
+            <div class="chat-messages">
+              <div class="chat-message received"><span class="msg-sender">Dr. Mehta:</span> <span class="msg-text">Hi! How is your child feeling today?</span></div>
+              <div class="chat-message sent"><span class="msg-sender">You:</span> <span class="msg-text">My daughter has a mild fever.</span></div>
+            </div>
+            <form class="chat-form" action="#" method="get">
+              <input type="text" placeholder="Type your message..." required>
+              <button type="submit" class="btn btn-primary btn-small">Send</button>
+            </form>
+            <p class="disclaimer" style="margin-top:0.5rem;font-size:0.8rem;">💡 Demo chat — messages are not actually sent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile 3: Dr. Rohan Kapoor -->
+  <section id="profile-doctor3" class="profile-page">
+    <div class="container">
+      <a href="doctors.html" class="back-link">← Back to All Doctors</a>
+      <div class="profile-grid">
+        <div class="profile-avatar">
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Dr. Rohan Kapoor">
+          <h3>Dr. Rohan Kapoor</h3>
+          <span class="specialty-badge">🩺 General Physician</span>
+          <div class="rating">⭐⭐⭐⭐⭐ 4.7 (85 reviews)</div>
+        </div>
+        <div class="profile-details">
+          <h2>Dr. Rohan Kapoor, MD, FACP</h2>
+          <span class="specialty-badge">Senior Consultant - Internal Medicine</span>
+          <p class="bio-full">Dr. Rohan Kapoor is a dedicated general physician with over 10 years of experience in internal medicine. He completed his medical education at CMC Vellore and his residency at the Mayo Clinic, USA. Dr. Kapoor specializes in preventive medicine, chronic disease management, and acute care. He is a Fellow of the American College of Physicians (FACP).</p>
+          
+          <div class="info-grid">
+            <div class="info-item"><strong>🎓 Education:</strong> MBBS (CMC Vellore), MD (Internal Medicine), FACP</div>
+            <div class="info-item"><strong>⏳ Experience:</strong> 10+ years</div>
+            <div class="info-item"><strong>🗣️ Languages:</strong> English, Hindi, Punjabi</div>
+            <div class="info-item"><strong>🏥 Clinic:</strong> MediCare Family Health Centre, Wellness City</div>
+            <div class="info-item"><strong>📅 Available:</strong> Mon-Fri (8:00 AM - 4:00 PM)</div>
+            <div class="info-item"><strong>🏆 Specializations:</strong> Preventive Medicine, Chronic Disease Management, Acute Care</div>
+          </div>
+
+          <a href="index.html#appointment" class="btn btn-primary">Book Appointment</a>
+
+          <div class="chat-section">
+            <h3>💬 Chat with Dr. Kapoor</h3>
+            <div class="chat-messages">
+              <div class="chat-message received"><span class="msg-sender">Dr. Kapoor:</span> <span class="msg-text">Good day! How can I assist you?</span></div>
+              <div class="chat-message sent"><span class="msg-sender">You:</span> <span class="msg-text">I need a routine health checkup.</span></div>
+            </div>
+            <form class="chat-form" action="#" method="get">
+              <input type="text" placeholder="Type your message..." required>
+              <button type="submit" class="btn btn-primary btn-small">Send</button>
+            </form>
+            <p class="disclaimer" style="margin-top:0.5rem;font-size:0.8rem;">💡 Demo chat — messages are not actually sent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile 4: Dr. Sara Khan -->
+  <section id="profile-doctor4" class="profile-page">
+    <div class="container">
+      <a href="doctors.html" class="back-link">← Back to All Doctors</a>
+      <div class="profile-grid">
+        <div class="profile-avatar">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Sara Khan">
+          <h3>Dr. Sara Khan</h3>
+          <span class="specialty-badge">🦷 Dentist</span>
+          <div class="rating">⭐⭐⭐⭐⭐ 4.9 (112 reviews)</div>
+        </div>
+        <div class="profile-details">
+          <h2>Dr. Sara Khan, BDS, MDS</h2>
+          <span class="specialty-badge">Consultant Prosthodontist & Cosmetic Dentist</span>
+          <p class="bio-full">Dr. Sara Khan is a skilled dentist with over 8 years of experience in cosmetic and restorative dentistry. She completed her dental education at KEM Hospital and her post-graduation from the University of Hong Kong. Dr. Khan specializes in smile design, dental implants, and full-mouth rehabilitation.</p>
+          
+          <div class="info-grid">
+            <div class="info-item"><strong>🎓 Education:</strong> BDS (KEM Hospital), MDS (Prosthodontics, University of Hong Kong)</div>
+            <div class="info-item"><strong>⏳ Experience:</strong> 8+ years</div>
+            <div class="info-item"><strong>🗣️ Languages:</strong> English, Hindi, Urdu</div>
+            <div class="info-item"><strong>🏥 Clinic:</strong> MediCare Dental Studio, Wellness City</div>
+            <div class="info-item"><strong>📅 Available:</strong> Tue, Wed, Fri, Sat (10:00 AM - 7:00 PM)</div>
+            <div class="info-item"><strong>🏆 Specializations:</strong> Cosmetic Dentistry, Dental Implants, Smile Design</div>
+          </div>
+
+          <a href="index.html#appointment" class="btn btn-primary">Book Appointment</a>
+
+          <div class="chat-section">
+            <h3>💬 Chat with Dr. Khan</h3>
+            <div class="chat-messages">
+              <div class="chat-message received"><span class="msg-sender">Dr. Khan:</span> <span class="msg-text">Hello! How can I help your dental health?</span></div>
+              <div class="chat-message sent"><span class="msg-sender">You:</span> <span class="msg-text">I need a teeth cleaning appointment.</span></div>
+            </div>
+            <form class="chat-form" action="#" method="get">
+              <input type="text" placeholder="Type your message..." required>
+              <button type="submit" class="btn btn-primary btn-small">Send</button>
+            </form>
+            <p class="disclaimer" style="margin-top:0.5rem;font-size:0.8rem;">💡 Demo chat — messages are not actually sent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile 5: Dr. Vikram Patel -->
+  <section id="profile-doctor5" class="profile-page">
+    <div class="container">
+      <a href="doctors.html" class="back-link">← Back to All Doctors</a>
+      <div class="profile-grid">
+        <div class="profile-avatar">
+          <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Dr. Vikram Patel">
+          <h3>Dr. Vikram Patel</h3>
+          <span class="specialty-badge">🧠 Neurologist</span>
+          <div class="rating">⭐⭐⭐⭐⭐ 4.8 (76 reviews)</div>
+        </div>
+        <div class="profile-details">
+          <h2>Dr. Vikram Patel, MD, DM</h2>
+          <span class="specialty-badge">Senior Consultant Neurologist</span>
+          <p class="bio-full">Dr. Vikram Patel is a highly experienced neurologist with over 14 years of expertise in diagnosing and treating neurological disorders. He completed his medical education at the National Institute of Mental Health and Neurosciences (NIMHANS) and has published extensively in the field of stroke and epilepsy management.</p>
+          
+          <div class="info-grid">
+            <div class="info-item"><strong>🎓 Education:</strong> MBBS (NIMHANS), MD (Neurology), DM (Neurology)</div>
+            <div class="info-item"><strong>⏳ Experience:</strong> 14+ years</div>
+            <div class="info-item"><strong>🗣️ Languages:</strong> English, Hindi, Kannada</div>
+            <div class="info-item"><strong>🏥 Clinic:</strong> MediCare Neuro Centre, Wellness City</div>
+            <div class="info-item"><strong>📅 Available:</strong> Mon, Wed, Thu (9:00 AM - 6:00 PM)</div>
+            <div class="info-item"><strong>🏆 Specializations:</strong> Stroke Management, Epilepsy, Movement Disorders</div>
+          </div>
+
+          <a href="index.html#appointment" class="btn btn-primary">Book Appointment</a>
+
+          <div class="chat-section">
+            <h3>💬 Chat with Dr. Patel</h3>
+            <div class="chat-messages">
+              <div class="chat-message received"><span class="msg-sender">Dr. Patel:</span> <span class="msg-text">Hello! How can I assist you with your neurological health?</span></div>
+              <div class="chat-message sent"><span class="msg-sender">You:</span> <span class="msg-text">I have been experiencing frequent headaches.</span></div>
+            </div>
+            <form class="chat-form" action="#" method="get">
+              <input type="text" placeholder="Type your message..." required>
+              <button type="submit" class="btn btn-primary btn-small">Send</button>
+            </form>
+            <p class="disclaimer" style="margin-top:0.5rem;font-size:0.8rem;">💡 Demo chat — messages are not actually sent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile 6: Dr. Priya Singh -->
+  <section id="profile-doctor6" class="profile-page">
+    <div class="container">
+      <a href="doctors.html" class="back-link">← Back to All Doctors</a>
+      <div class="profile-grid">
+        <div class="profile-avatar">
+          <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Dr. Priya Singh">
+          <h3>Dr. Priya Singh</h3>
+          <span class="specialty-badge">🦴 Orthopedic Surgeon</span>
+          <div class="rating">⭐⭐⭐⭐⭐ 4.7 (64 reviews)</div>
+        </div>
+        <div class="profile-details">
+          <h2>Dr. Priya Singh, MS, MCh</h2>
+          <span class="specialty-badge">Consultant Orthopedic Surgeon</span>
+          <p class="bio-full">Dr. Priya Singh is an accomplished orthopedic surgeon with over 11 years of experience in joint replacement and sports medicine. She completed her training at the Christian Medical College (CMC) and has performed over 1000 successful joint replacement surgeries.</p>
+          
+          <div class="info-grid">
+            <div class="info-item"><strong>🎓 Education:</strong> MBBS (CMC), MS (Orthopedics), MCh (Joint Replacement)</div>
+            <div class="info-item"><strong>⏳ Experience:</strong> 11+ years</div>
+            <div class="info-item"><strong>🗣️ Languages:</strong> English, Hindi, Tamil</div>
+            <div class="info-item"><strong>🏥 Clinic:</strong> MediCare Orthopedic Centre, Wellness City</div>
+            <div class="info-item"><strong>📅 Available:</strong> Mon, Tue, Fri (8:00 AM - 4:00 PM)</div>
+            <div class="info-item"><strong>🏆 Specializations:</strong> Joint Replacement, Sports Medicine, Arthroscopy</div>
+          </div>
+
+          <a href="index.html#appointment" class="btn btn-primary">Book Appointment</a>
+
+          <div class="chat-section">
+            <h3>💬 Chat with Dr. Singh</h3>
+            <div class="chat-messages">
+              <div class="chat-message received"><span class="msg-sender">Dr. Singh:</span> <span class="msg-text">Hi! How can I help with your orthopedic concerns?</span></div>
+              <div class="chat-message sent"><span class="msg-sender">You:</span> <span class="msg-text">I have knee pain when walking.</span></div>
+            </div>
+            <form class="chat-form" action="#" method="get">
+              <input type="text" placeholder="Type your message..." required>
+              <button type="submit" class="btn btn-primary btn-small">Send</button>
+            </form>
+            <p class="disclaimer" style="margin-top:0.5rem;font-size:0.8rem;">💡 Demo chat — messages are not actually sent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile 7: Dr. Meera Reddy -->
+  <section id="profile-doctor7" class="profile-page">
+    <div class="container">
+      <a href="doctors.html" class="back-link">← Back to All Doctors</a>
+      <div class="profile-grid">
+        <div class="profile-avatar">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Dr. Meera Reddy">
+          <h3>Dr. Meera Reddy</h3>
+          <span class="specialty-badge">🧴 Dermatologist</span>
+          <div class="rating">⭐⭐⭐⭐⭐ 4.6 (53 reviews)</div>
+        </div>
+        <div class="profile-details">
+          <h2>Dr. Meera Reddy, MD, DVD</h2>
+          <span class="specialty-badge">Consultant Dermatologist</span>
+          <p class="bio-full">Dr. Meera Reddy is a skilled dermatologist with over 9 years of experience in medical and cosmetic dermatology. She specializes in treating skin conditions and providing aesthetic treatments to help patients look and feel their best.</p>
+          
+          <div class="info-grid">
+            <div class="info-item"><strong>🎓 Education:</strong> MBBS, MD (Dermatology), DVD</div>
+            <div class="info-item"><strong>⏳ Experience:</strong> 9+ years</div>
+            <div class="info-item"><strong>🗣️ Languages:</strong> English, Hindi, Telugu</div>
+            <div class="info-item"><strong>🏥 Clinic:</strong> MediCare Skin & Laser Clinic, Wellness City</div>
+            <div class="info-item"><strong>📅 Available:</strong> Mon, Wed, Thu, Sat (10:00 AM - 6:00 PM)</div>
+            <div class="info-item"><strong>🏆 Specializations:</strong> Cosmetic Dermatology, Laser Treatments, Skin Conditions</div>
+          </div>
+
+          <a href="index.html#appointment" class="btn btn-primary">Book Appointment</a>
+
+          <div class="chat-section">
+            <h3>💬 Chat with Dr. Reddy</h3>
+            <div class="chat-messages">
+              <div class="chat-message received"><span class="msg-sender">Dr. Reddy:</span> <span class="msg-text">Hello! How can I help with your skin concerns?</span></div>
+              <div class="chat-message sent"><span class="msg-sender">You:</span> <span class="msg-text">I have been having acne problems.</span></div>
+            </div>
+            <form class="chat-form" action="#" method="get">
+              <input type="text" placeholder="Type your message..." required>
+              <button type="submit" class="btn btn-primary btn-small">Send</button>
+            </form>
+            <p class="disclaimer" style="margin-top:0.5rem;font-size:0.8rem;">💡 Demo chat — messages are not actually sent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile 8: Dr. Sunita Verma -->
+  <section id="profile-doctor8" class="profile-page">
+    <div class="container">
+      <a href="doctors.html" class="back-link">← Back to All Doctors</a>
+      <div class="profile-grid">
+        <div class="profile-avatar">
+          <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="Dr. Sunita Verma">
+          <h3>Dr. Sunita Verma</h3>
+          <span class="specialty-badge">👩‍⚕️ Gynecologist</span>
+          <div class="rating">⭐⭐⭐⭐⭐ 4.9 (89 reviews)</div>
+        </div>
+        <div class="profile-details">
+          <h2>Dr. Sunita Verma, MD, DGO</h2>
+          <span class="specialty-badge">Senior Consultant Gynecologist</span>
+          <p class="bio-full">Dr. Sunita Verma is a highly respected gynecologist with over 13 years of experience in women's health. She completed her training at the prestigious Lady Hardinge Medical College and has expertise in high-risk pregnancies, infertility, and laparoscopic surgery.</p>
+          
+          <div class="info-grid">
+            <div class="info-item"><strong>🎓 Education:</strong> MBBS, MD (Obstetrics & Gynecology), DGO</div>
+            <div class="info-item"><strong>⏳ Experience:</strong> 13+ years</div>
+            <div class="info-item"><strong>🗣️ Languages:</strong> English, Hindi, Punjabi</div>
+            <div class="info-item"><strong>🏥 Clinic:</strong> MediCare Women's Health Centre, Wellness City</div>
+            <div class="info-item"><strong>📅 Available:</strong> Mon, Tue, Thu, Fri (9:00 AM - 5:00 PM)</div>
+            <div class="info-item"><strong>🏆 Specializations:</strong> High-Risk Pregnancy, Infertility, Laparoscopic Surgery</div>
+          </div>
+
+          <a href="index.html#appointment" class="btn btn-primary">Book Appointment</a>
+
+          <div class="chat-section">
+            <h3>💬 Chat with Dr. Verma</h3>
+            <div class="chat-messages">
+              <div class="chat-message received"><span class="msg-sender">Dr. Verma:</span> <span class="msg-text">Hello! How can I help with your women's health concerns?</span></div>
+              <div class="chat-message sent"><span class="msg-sender">You:</span> <span class="msg-text">I need to schedule a routine checkup.</span></div>
+            </div>
+            <form class="chat-form" action="#" method="get">
+              <input type="text" placeholder="Type your message..." required>
+              <button type="submit" class="btn btn-primary btn-small">Send</button>
+            </form>
+            <p class="disclaimer" style="margin-top:0.5rem;font-size:0.8rem;">💡 Demo chat — messages are not actually sent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile 9: Dr. Arjun Nair -->
+  <section id="profile-doctor9" class="profile-page">
+    <div class="container">
+      <a href="doctors.html" class="back-link">← Back to All Doctors</a>
+      <div class="profile-grid">
+        <div class="profile-avatar">
+          <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="Dr. Arjun Nair">
+          <h3>Dr. Arjun Nair</h3>
+          <span class="specialty-badge">🧘 Psychiatrist</span>
+          <div class="rating">⭐⭐⭐⭐⭐ 4.5 (47 reviews)</div>
+        </div>
+        <div class="profile-details">
+          <h2>Dr. Arjun Nair, MD, DPM</h2>
+          <span class="specialty-badge">Consultant Psychiatrist</span>
+          <p class="bio-full">Dr. Arjun Nair is a compassionate psychiatrist with over 10 years of experience in mental health. He completed his training at the National Institute of Mental Health and Neurosciences (NIMHANS) and specializes in anxiety disorders, depression, and stress management.</p>
+          
+          <div class="info-grid">
+            <div class="info-item"><strong>🎓 Education:</strong> MBBS, MD (Psychiatry), DPM</div>
+            <div class="info-item"><strong>⏳ Experience:</strong> 10+ years</div>
+            <div class="info-item"><strong>🗣️ Languages:</strong> English, Hindi, Malayalam</div>
+            <div class="info-item"><strong>🏥 Clinic:</strong> MediCare Mental Wellness Centre, Wellness City</div>
+            <div class="info-item"><strong>📅 Available:</strong> Mon, Wed, Fri (10:00 AM - 6:00 PM)</div>
+            <div class="info-item"><strong>🏆 Specializations:</strong> Anxiety Disorders, Depression, Stress Management</div>
+          </div>
+
+          <a href="index.html#appointment" class="btn btn-primary">Book Appointment</a>
+
+          <div class="chat-section">
+            <h3>💬 Chat with Dr. Nair</h3>
+            <div class="chat-messages">
+              <div class="chat-message received"><span class="msg-sender">Dr. Nair:</span> <span class="msg-text">Hello! How can I support your mental health today?</span></div>
+              <div class="chat-message sent"><span class="msg-sender">You:</span> <span class="msg-text">I've been feeling anxious lately.</span></div>
+            </div>
+            <form class="chat-form" action="#" method="get">
+              <input type="text" placeholder="Type your message..." required>
+              <button type="submit" class="btn btn-primary btn-small">Send</button>
+            </form>
+            <p class="disclaimer" style="margin-top:0.5rem;font-size:0.8rem;">💡 Demo chat — messages are not actually sent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile 10: Dr. Kavya Sharma -->
+  <section id="profile-doctor10" class="profile-page">
+    <div class="container">
+      <a href="doctors.html" class="back-link">← Back to All Doctors</a>
+      <div class="profile-grid">
+        <div class="profile-avatar">
+          <img src="https://randomuser.me/api/portraits/women/78.jpg" alt="Dr. Kavya Sharma">
+          <h3>Dr. Kavya Sharma</h3>
+          <span class="specialty-badge">👁️ Ophthalmologist</span>
+          <div class="rating">⭐⭐⭐⭐⭐ 4.8 (71 reviews)</div>
+        </div>
+        <div class="profile-details">
+          <h2>Dr. Kavya Sharma, MD, DOMS</h2>
+          <span class="specialty-badge">Consultant Ophthalmologist</span>
+          <p class="bio-full">Dr. Kavya Sharma is an experienced ophthalmologist with over 10 years of expertise in eye care. She completed her training at the Aravind Eye Hospital and specializes in cataract surgery, refractive surgery, and pediatric ophthalmology.</p>
+          
+          <div class="info-grid">
+            <div class="info-item"><strong>🎓 Education:</strong> MBBS, MD (Ophthalmology), DOMS</div>
+            <div class="info-item"><strong>⏳ Experience:</strong> 10+ years</div>
+            <div class="info-item"><strong>🗣️ Languages:</strong> English, Hindi, Sanskrit</div>
+            <div class="info-item"><strong>🏥 Clinic:</strong> MediCare Eye Centre, Wellness City</div>
+            <div class="info-item"><strong>📅 Available:</strong> Tue, Wed, Fri, Sat (9:00 AM - 5:00 PM)</div>
+            <div class="info-item"><strong>🏆 Specializations:</strong> Cataract Surgery, Refractive Surgery, Pediatric Ophthalmology</div>
+          </div>
+
+          <a href="index.html#appointment" class="btn btn-primary">Book Appointment</a>
+
+          <div class="chat-section">
+            <h3>💬 Chat with Dr. Sharma</h3>
+            <div class="chat-messages">
+              <div class="chat-message received"><span class="msg-sender">Dr. Sharma:</span> <span class="msg-text">Hello! How can I help with your eye care needs?</span></div>
+              <div class="chat-message sent"><span class="msg-sender">You:</span> <span class="msg-text">I need to get my eyes checked for glasses.</span></div>
+            </div>
+            <form class="chat-form" action="#" method="get">
+              <input type="text" placeholder="Type your message..." required>
+              <button type="submit" class="btn btn-primary btn-small">Send</button>
+            </form>
+            <p class="disclaimer" style="margin-top:0.5rem;font-size:0.8rem;">💡 Demo chat — messages are not actually sent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>MediCare</h3>
+        <p>Compassionate care. Better health. A simpler healthcare experience.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="index.html#health-tips">Health Tips</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li>General Consultation</li>
+          <li>Cardiology</li>
+          <li>Pediatrics</li>
+          <li>Dental Care</li>
+          <li>Diagnostics</li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <ul>
+          <li>123 Health St, Wellness City</li>
+          <li>info@medicare.demo</li>
+          <li>+1 (555) 123-4567</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 MediCare. Demo healthcare website.</p>
+      <p class="footer-disclaimer">This website is a design/demo project and does not provide medical diagnosis, treatment, or emergency services.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
