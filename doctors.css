@@ -255,7 +255,6 @@
 .doctor-card.hidden {
   display: none;
 }
-
 /* ===== PROFILE PAGES ===== */
 .profile-page {
   display: none;
@@ -263,21 +262,20 @@
   background: var(--bg);
 }
 
+/* Show targeted profile */
 .profile-page:target {
   display: block;
 }
 
-/* Hide main content when profile is shown */
-.profile-page:target ~ .doctors-list {
+body:has(.profile-page:target) .doctors-wrapper {
   display: none;
-}
-.profile-page:target ~ .doctors-hero {
-  display: none;
-}
-.profile-page:target ~ .site-footer {
-  display: block;
 }
 
+@supports not selector(:has(*)) {
+  .profile-page:target ~ .doctors-wrapper {
+    display: none;
+  }
+}
 .back-link {
   display: inline-block;
   margin-bottom: 2rem;

@@ -1226,3 +1226,103 @@ img {
     width: 130;
   }
 }
+/* ===== BACK TO TOP BUTTON ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 4px 16px rgba(11, 110, 142, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(11, 110, 142, 0.4);
+}
+
+/* ===== HEADER SCROLL EFFECT ===== */
+.site-header.scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 0.3rem 0;
+}
+
+/* ===== IMAGE LOAD ANIMATION ===== */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* ===== CHAT TYPING INDICATOR ===== */
+.chat-message.received .msg-text:contains("Typing") {
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ===== FORM FIELD VALIDATION ===== */
+.form-group input:invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+  border-color: #ef4444;
+}
+
+.form-group input:valid:not(:placeholder-shown),
+.form-group textarea:valid:not(:placeholder-shown) {
+  border-color: #16A6A0;
+}
+
+/* ===== ACTIVE NAV LINK ===== */
+.main-nav a.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.main-nav a.active::after {
+  width: 100%;
+}
+
+/* ===== MOBILE NAV TRANSITION ===== */
+.main-nav {
+  transition: max-height 0.4s ease;
+}
+
+/* ===== SMOOTH SCROLL OFFSET ===== */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* ===== RESPONSIVE BACK TO TOP ===== */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}
