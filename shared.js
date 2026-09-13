@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const targetId = this.getAttribute('href');
       if (targetId === '#' || targetId === '') return;
       
+      // Skip profile links — let browser handle them natively
+      if (targetId.startsWith('#profile-')) return;
+      
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
@@ -61,46 +64,12 @@ document.addEventListener('DOMContentLoaded', function() {
       // Show alert for demo
       if (this.classList.contains('appointment-form')) {
         alert('Demo form: Your appointment request has been noted. This is a demonstration — no real appointment was booked.');
-      } else if (this.classList.contains('chat-form')) {
-        const input = this.querySelector('input');
-        if (input && input.value.trim()) {
-          addChatMessage(this, input.value, 'sent');
-          input.value = '';
-          
-          // Auto-reply
-          setTimeout(() => {
-            addChatMessage(this, 'Thank you for your message. This is a demo — a real doctor would respond here.', 'received');
-          }, 1000);
-        }
       } else if (this.classList.contains('contact-form') || this.querySelector('#cname')) {
         alert('Demo form: Your message has been noted. This is a demonstration — no real message was sent.');
       }
+      // Note: chat-form is handled by doctors.js only
     });
   });
-
-  // ===== CHAT FUNCTIONALITY =====
-  function addChatMessage(form, text, type) {
-    const chatMessages = form.closest('.chat-section').querySelector('.chat-messages');
-    if (!chatMessages) return;
-    
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `chat-message ${type}`;
-    
-    const senderSpan = document.createElement('span');
-    senderSpan.className = 'msg-sender';
-    senderSpan.textContent = type === 'sent' ? 'You:' : 'Doctor:';
-    
-    const textSpan = document.createElement('span');
-    textSpan.className = 'msg-text';
-    textSpan.textContent = text;
-    
-    messageDiv.appendChild(senderSpan);
-    messageDiv.appendChild(textSpan);
-    chatMessages.appendChild(messageDiv);
-    
-    // Scroll to bottom
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }
 
   // ===== HERO STATS COUNTER ANIMATION =====
   const statNumbers = document.querySelectorAll('.stat-number');
@@ -188,5 +157,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     images.forEach(img => imageObserver.observe(img));
-} 
-}); 
+  }
+});
