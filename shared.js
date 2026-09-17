@@ -18,9 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
       if (targetId === '#' || targetId === '') return;
-      
-      // Skip profile links — let browser handle them natively
-      if (targetId.startsWith('#profile-')) return;
+      // ✅ SKIP profile & booking links — let browser handle them natively
+      if (targetId.startsWith('#profile-') || targetId.startsWith('#book-')) return;
       
       const targetElement = document.querySelector(targetId);
       if (targetElement) {

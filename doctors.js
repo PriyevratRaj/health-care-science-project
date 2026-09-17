@@ -1,6 +1,11 @@
 // ===== DOCTORS PAGE SPECIFIC JAVASCRIPT =====
 
 document.addEventListener('DOMContentLoaded', function() {
+   // ===== SET MINIMUM DATE TO TODAY FOR BOOKING FORMS =====
+  document.querySelectorAll('.book-form input[type="date"]').forEach(input => {
+    const today = new Date().toISOString().split('T')[0];
+    input.setAttribute('min', today);
+  });
 // Track used replies per doctor (prevents repeats in same session)
   const usedReplies = {};
   

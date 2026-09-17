@@ -23,7 +23,7 @@
 .services-hero-content {
   position: relative;
   z-index: 1;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -78,6 +78,13 @@
   border-color: white;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.quick-nav-btn.active {
+  background: white;
+  color: var(--primary);
+  border-color: white;
+  font-weight: 600;
 }
 
 /* ===== SERVICES INTRO ===== */
@@ -322,6 +329,69 @@
   margin-bottom: 0.2rem;
 }
 
+/* ===== SERVICE DOCTORS ===== */
+.service-doctors {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-doctor-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.service-detail.alt-bg .service-doctor-card {
+  background: var(--accent);
+}
+
+.service-doctor-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(11, 110, 142, 0.12);
+  background: white;
+}
+
+.service-doctor-card img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.service-doctor-card div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.service-doctor-card strong {
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.service-doctor-card span {
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
 /* ===== SERVICE ACTIONS ===== */
 .service-actions {
   display: flex;
@@ -453,75 +523,15 @@
 section[id^="service-"] {
   scroll-margin-top: 80px;
 }
-/* ===== SERVICE DOCTORS (Doctors listed within each service) ===== */
-.service-doctors {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
 
-.service-doctor-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.8rem 1rem;
-  background: var(--bg);
-  border-radius: var(--radius-sm);
-  border: 2px solid transparent;
-  transition: all var(--transition);
-  text-decoration: none;
-}
-
-.service-detail.alt-bg .service-doctor-card {
-  background: var(--accent);
-}
-
-.service-doctor-card:hover {
-  border-color: var(--primary);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(11, 110, 142, 0.12);
-  background: white;
-}
-
-.service-doctor-card img {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  flex-shrink: 0;
-}
-
-.service-doctor-card div {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.service-doctor-card strong {
-  color: var(--text);
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 0.15rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.service-doctor-card span {
-  color: var(--primary);
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-/* Mobile adjustment for service doctors */
-@media (max-width: 768px) {
-  .service-doctors {
-    grid-template-columns: 1fr;
+/* ===== RIPPLE ANIMATION (for CTA buttons) ===== */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
   }
 }
+
 /* ===== RESPONSIVE ===== */
 
 /* Tablet */
@@ -610,6 +620,10 @@ section[id^="service-"] {
     width: 100%;
   }
 
+  .service-doctors {
+    grid-template-columns: 1fr;
+  }
+
   .why-services-grid {
     grid-template-columns: 1fr;
   }
@@ -658,4 +672,123 @@ section[id^="service-"] {
   .service-list li {
     font-size: 0.9rem;
   }
+
+  .service-doctor-card {
+    padding: 0.6rem 0.8rem;
+  }
+
+  .service-doctor-card img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .service-doctor-card strong {
+    font-size: 0.85rem;
+  }
+
+  .service-doctor-card span {
+    font-size: 0.75rem;
+  }
+}
+/* ===== BOOKING FORMS ===== */
+.book-page {
+  display: none;
+  padding: 3rem 0 5rem;
+  background: var(--bg);
+}
+
+.book-page:target {
+  display: block;
+}
+
+/* Hide main services content when a booking form is open */
+body:has(.book-page:target) .services-hero,
+body:has(.book-page:target) .services-intro,
+body:has(.book-page:target) .service-detail,
+body:has(.book-page:target) .why-services,
+body:has(.book-page:target) .cta-section {
+  display: none;
+}
+
+.book-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.book-header {
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.book-doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.book-doctor-info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.book-doctor-info h2 {
+  font-size: 1.4rem;
+  color: var(--text);
+  margin: 0 0 0.3rem;
+}
+
+.book-doctor-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0;
+}
+
+.book-doctor-specialty {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.2rem 0 0;
+}
+
+.book-form input[readonly] {
+  background: var(--accent);
+  color: var(--primary);
+  font-weight: 600;
+  cursor: not-allowed;
+  border-color: var(--secondary);
+}
+
+.book-actions {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.book-actions .btn {
+  padding: 0.9rem 1.5rem;
+}
+
+.book-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .book-card { padding: 1.5rem; }
+  .book-form .form-row { grid-template-columns: 1fr; }
+  .book-actions { grid-template-columns: 1fr; }
+  .book-doctor-info { flex-direction: column; text-align: center; }
+  .book-doctor-info h2 { font-size: 1.2rem; }
 }

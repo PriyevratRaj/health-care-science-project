@@ -622,3 +622,136 @@ body:has(.profile-page:target) .doctors-wrapper {
 .main-nav a.active::after {
   width: 100%;
 }
+/* ===== ACTIVE NAV LINK ===== */
+.main-nav a.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.main-nav a.active::after {
+  width: 100%;
+}
+
+/* ===== BOOK APPOINTMENT PAGES ===== */
+.book-page {
+  display: none;
+  padding: 3rem 0 5rem;
+  background: var(--bg);
+}
+
+.book-page:target {
+  display: block;
+}
+
+/* Hide doctors wrapper when a booking page is shown */
+body:has(.book-page:target) .doctors-wrapper {
+  display: none;
+}
+
+/* Hide doctor profiles when a booking page is shown */
+body:has(.book-page:target) .profile-page {
+  display: none;
+}
+
+/* Hide doctors wrapper when a profile is shown */
+body:has(.profile-page:target) .doctors-wrapper {
+  display: none;
+}
+
+.book-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.book-header {
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.book-doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.book-doctor-info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.book-doctor-info h2 {
+  font-size: 1.4rem;
+  color: var(--text);
+  margin: 0 0 0.3rem;
+}
+
+.book-doctor-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0;
+}
+
+.book-doctor-specialty {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.2rem 0 0;
+}
+
+.book-form input[readonly] {
+  background: var(--accent);
+  color: var(--primary);
+  font-weight: 600;
+  cursor: not-allowed;
+  border-color: var(--secondary);
+}
+
+.book-actions {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.book-actions .btn {
+  padding: 0.9rem 1.5rem;
+}
+
+.book-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .book-card {
+    padding: 1.5rem;
+  }
+
+  .book-form .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .book-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .book-doctor-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .book-doctor-info h2 {
+    font-size: 1.2rem;
+  }
+}
