@@ -389,7 +389,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const lower = message.toLowerCase();
         let reply;
 
-        if (/^(hi|hello|hey|good morning|good afternoon|good evening)/i.test(lower)) {
+        if (/^(hi|hello|hey|good morning|good afternoon||good evening)/i.test(lower)) {
           reply = `Hello! I'm ${doctorName}. How can I help you today?`;
         } else if (lower.includes('thank')) {
           reply = 'You are very welcome! Take care of yourself.';
